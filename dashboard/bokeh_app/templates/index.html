@@ -1,0 +1,43 @@
+{% extends base %}
+
+{% block postamble %}
+  <style>
+    h1 {
+      margin: 0 0 0 0;
+      color: #2e484c;
+      font-family: 'Julius Sans One', sans-serif;
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+    p {
+      font: "Libre Baskerville", sans-serif;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  </style>
+{% endblock %}
+
+{% block contents %}
+  <div>
+    <a href="https://openclassrooms.com/fr/paths/164/projects/632/assignment">
+      <img src="bokeh_app/static/images/oc.png" alt="Openclassrooms" width="418" height="50"></a>
+    <h1>P7: Implement of scoring model</h1>
+    <p> This dashboard uses <code>Bokeh</code> to visualise clients descriptions and score selected client.</p>
+    <ul style="list-style-type:circle">
+      <li><b>Filter table</b>:
+        This tab shows descriptive information in <code>DataTable</code> filtered by features selected.</li><br>
+      <li><b>Predict plot</b>:
+        The upper <code>plot</code> predicts probability. A probability of default > 0.384 should be risky.<br>
+        The <code>plot</code> below shows contributions of top features,
+        so as to explain possible reasons for a rejection.</li><br>
+      <li><b>Compare plot</b>:
+        The left <code>plot</code> shows different distribution of selected feature for default and non-default group
+        of all training data.<br>
+        The right <code>text</code> show selected client information as to compare with left plot and explanation feature.<br>
+        The upper ratio bar plot is for category feature. The below kde line plot is for numeric feature.
+      </li>
+    </ul>
+    <br><br>
+  </div>
+  {{ super() }}
+{% endblock %}

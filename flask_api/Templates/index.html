@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1>Credit Risk Scoring</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<label>For client with ID</label>
+        <input type="text" name="id" placeholder="Client ID(ex: 100038)" />
+        <label>For client without ID</label>
+        <select type='text' name="gender">
+            <option value="">--Please choose gender--</option>
+            <option value="1">Female</option>
+            <option value="0">Male</option>
+        </select>
+        <select type='text' name="education">
+            <option value="">--Please choose education level--</option>
+            <option value="1">Higher Education</option>
+            <option value="0">Others</option>
+        </select>
+        <input type="text" name="age" placeholder="client age(ex: 30)"  />
+		<input type="text" name="amt" placeholder="credit amount of application in $(ex: 300000)" />
+        <input type="text" name="ext3" placeholder="external_data_source3 range 0-1 (ex: 0.2)"  />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict credit risk score</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
