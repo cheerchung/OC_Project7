@@ -16,3 +16,4 @@ sklearn==0.0
 threadpoolctl==2.1.0
 Werkzeug==2.0.1
 xgboost==0.90
+requests==2.25.1
