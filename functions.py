@@ -489,4 +489,4 @@ def plot_feature_importances(df, threshold = 0.9):
     importance_index = np.min(np.where(df['cumulative_importance'] > threshold))
     print('%d features required for %0.2f of cumulative importance' % (importance_index + 1, threshold))
     
-    return df
+    return df 
