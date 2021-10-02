@@ -1,5 +1,4 @@
-# OC_Project7
-Openclassroom Data Scientist Project7 : Implémentez un modèle de scoring<br>
+# Openclassroom Data Scientist Project7 : Implémentez un modèle de scoring<br>
 
 <b>project description</b>: <br>
 L’entreprise souhaite développer un modèle de scoring de la probabilité de défaut de paiement du client pour étayer la décision d'accorder ou non un prêt à un client potentiel en s’appuyant sur des sources de données variées (données comportementales, données provenant d'autres institutions financières, etc.).
